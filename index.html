@@ -1,0 +1,114 @@
+<!--    
+    Irá mostrar o conteúdo do arquivo index.html
+    que está na pasta raiz do projeto.
+    Deve conter botões com links para as páginas
+    de contato e de listagem de projetos.
+    Deve mostrar ao final da página, links para
+    as redes sociais do desenvolvedor, e uma
+    imagem com o seu avatar.
+    Deve exibir uma API do spotify com a música
+    sendo tocada no momento.
+
+    ao centro, deve exibir uma div com as linguagens mais utilizadas, e a classificação do usuário no github.
+
+    menu de 3 barras no canto superior esquerdo deve conter uma lista de links para as páginas de contato e de projetos.
+
+    o estilo do site deve ser feito com CSS, e deve ser responsivo.
+    estilo irá se basear no filme matrix.
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meu Portfólio</title>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="contato.html">Contato</a></li>
+                <li><a href="projetos.html">Projetos</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section>
+            <h1>Meu Portfólio</h1>
+            <p>Olá, meu nome é <strong>Luís</strong>, sou desenvolvedor mobile e estou em busca de novas oportunidades.</p>
+            <p>Atualmente estou estudando <strong>Android</strong>, <strong>Flutter</strong>, <strong>TypeScript</strong> e <strong>JavaScript</strong>.</p>
+            <p>Meu objetivo é me tornar um desenvolvedor fullstack.</p>
+        </section>
+
+        
+
+        <section>
+            <!-- Div para Mídias Sociais. Deve ficar no final -->
+            <div>
+                <a href="https://github.com/pajeeh" target="blank"><img
+                        src="https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white"></a>
+                <a href="https://instagram.com/_pajeeh" target="blank"><img
+                        src="https://img.shields.io/badge/Instagram-E4405F?style=for-the-badge&logo=instagram&logoColor=white"></a>
+                <a href="https://linkedin.com/in/lagsantos" target="blank"><img
+                        src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white"
+                        alt="lagsantos"></a>
+            </div>
+        </section>
+
+        <section>
+            <h2>Minhas linguagens favoritas</h2>
+            <ul>
+                <li>C</li>
+                <li>Dart</li>
+                <li>C++</li>
+                <li>Python</li>
+                <li>TypeScript</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2 align="left"><strong>My GitHub Statistics:</strong></h2>
+            <br />
+            <div align="center">
+                <div align="center">
+                    <a href="https://github.com/pajeeh">
+                        <img height="180em"
+                            src="https://github-readme-streak-stats.herokuapp.com?user=pajeeh&theme=hacker&date_format=j%20M%5B%20Y%5D&border=00FF00&fire=00FF00&ring=30D711"
+                            alt="pajeeh" />
+                    </a>
+                </div>
+            
+                <a href="https://github.com/pajeeh">
+                    <!--<br/> -->
+                    <img height="200em"
+                        src="https://github-readme-stats.vercel.app/api?username=pajeeh&include_all_commits=true&show_icons=true&theme=merko&hide_border=false&border_color=00FF00&title_color=39FF14&text_color=32CD32&custom_title=Paj%C3%A9%20GitHub%20Stats" />
+            
+                    <img height="200em"
+                        src="https://github-readme-stats.vercel.app/api/top-langs/?username=pajeeh&include_all_commits=true&show_icons=true&layout=compact&langs_count=10&theme=merko&hide_border=false&border_color=00FF00&title_color=39FF14&text_color=32CD32" />
+                </a>
+            </div>
+        </section>
+
+        <!-- Div para Spotify -->
+        <div align="center">
+            <h2 align="center"> <strong>Check out what I'm listening on Spotify🎵</strong></h2>
+        
+            <br />
+        
+            <a href="https://open.spotify.com/user/t7jdtrhmk7joivnm2cdd3c9py">
+                <img align="center" height="75" width="75" src="https://www.svgrepo.com/show/217778/spotify.svg">
+            </a>
+            <br /><br />
+        
+            [![Spotify](https://novatorem-pajeeh.vercel.app/api/spotify?background_color=0d1117&border_color=00FF00&)](https://open.spotify.com/user/t7jdtrhmk7joivnm2cdd3c9py)
+        </div>
+    </main>
+    <footer>
+        <p>Desenvolvido por <a href="https://github.com/pajeeh">Luís</a></p>
+    </footer>
+    
+</body>
+</html>
