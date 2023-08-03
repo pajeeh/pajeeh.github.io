@@ -27,8 +27,6 @@ description: >- # this means to ignore newlines until "baseurl:"
   Espero um dia poder ser um bom programador, e que esse blog possa me ajudar a
   chegar lá. Aqui eu vou postar sobre o que eu estou aprendendo, e também sobre
   o que eu acho interessante. Espero que vocês gostem!
-baseurl: "" # the subpath of your site, e.g. /blog
-url: "" # the base hostname & protocol for your site, e.g. http://example.com
 instagram_username: _pajeeh
 github_username:  Pajeeh
 linkedin_username:  lagsantos
