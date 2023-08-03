@@ -1,8 +1,6 @@
-<<<<<<< HEAD
 domain: pajeeh.github.io
 url: https://pajeeh.github.io
 baseurl: /pajeeh.github.io
-=======
 # Welcome to Jekyll!
 #
 # This config file is meant for settings that affect your whole blog, values
@@ -61,4 +59,3 @@ plugins:
 #   - vendor/cache/
 #   - vendor/gems/
 #   - vendor/ruby/
->>>>>>> b44338d (Adicionado avatar do usuário)
