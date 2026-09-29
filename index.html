@@ -1,115 +1,38 @@
-
-<!--    
-    Irá mostrar o conteúdo do arquivo index.html
-    que está na pasta raiz do projeto.
-    Deve conter botões com links para as páginas
-    de contato e de listagem de projetos.
-    Deve mostrar ao final da página, links para
-    as redes sociais do desenvolvedor, e uma
-    imagem com o seu avatar.
-    Deve exibir uma API do spotify com a música
-    sendo tocada no momento.
-
-    ao centro, deve exibir uma div com as linguagens mais utilizadas, e a classificação do usuário no github.
-
-    menu de 3 barras no canto superior esquerdo deve conter uma lista de links para as páginas de contato e de projetos.
-
-    o estilo do site deve ser feito com CSS, e deve ser responsivo.
-    estilo irá se basear no filme matrix.
--->
-
-<!DOCTYPE html>
-<html lang="en">
+<!doctype html>
+<html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Meu Portfólio</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#090d17">
+  <meta name="description" content="Pajé (Luís A. G. dos Santos): desenvolvedor Flutter, Dart, React e TypeScript. Projetos de música, mobile, jogos e produtos digitais.">
+  <title>Pajé — desenvolvedor de software</title>
+  <style>
+    :root{color-scheme:dark;--bg:#090d17;--panel:#111a2a;--line:#27354a;--text:#edf4f6;--muted:#a9bbc6;--mint:#78ecd0;--violet:#b9a5ff}
+    *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:radial-gradient(circle at 85% 4%,#24304d 0,transparent 30rem),radial-gradient(circle at 0 30%,#102d35 0,transparent 32rem),var(--bg);color:var(--text);font:16px/1.65 system-ui,-apple-system,Segoe UI,sans-serif}
+    a{color:inherit}a:focus-visible{outline:3px solid var(--mint);outline-offset:4px;border-radius:4px}.wrap{width:min(1120px,calc(100% - 40px));margin:auto}.skip{position:absolute;left:-9999px}.skip:focus{left:16px;top:16px;background:var(--mint);color:#07121a;padding:10px;z-index:10}
+    header{border-bottom:1px solid var(--line);background:#090d17d9}nav{display:flex;justify-content:space-between;align-items:center;gap:20px;min-height:72px}.brand{font-weight:850;letter-spacing:.08em;text-decoration:none;color:var(--mint)}.navlinks{display:flex;gap:26px;flex-wrap:wrap}.navlinks a{text-decoration:none;color:var(--muted)}.navlinks a:hover{color:var(--mint)}
+    main{overflow:hidden}.hero{padding:100px 0 90px;max-width:890px}.eyebrow{font-size:.82rem;letter-spacing:.18em;text-transform:uppercase;color:var(--mint);font-weight:750}h1{font-size:clamp(2.65rem,7vw,5.6rem);line-height:1.07;letter-spacing:-.055em;margin:20px 0 24px}h1 span{color:var(--mint)}.lede{color:#ccdae1;font-size:clamp(1.12rem,2vw,1.35rem);max-width:720px}.actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:32px}.button{display:inline-flex;align-items:center;justify-content:center;min-height:46px;padding:10px 19px;border:1px solid var(--mint);border-radius:8px;text-decoration:none;font-weight:700;background:var(--mint);color:#07151c}.button.secondary{background:transparent;color:var(--mint)}.button:hover{transform:translateY(-2px)}
+    section{padding:48px 0 72px}h2{font-size:clamp(1.8rem,4vw,2.6rem);letter-spacing:-.035em;line-height:1.2;margin:8px 0 20px}.intro{color:var(--muted);max-width:700px;margin-bottom:30px}.grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px}.card{border:1px solid var(--line);border-radius:14px;background:linear-gradient(145deg,#172337,#101827);padding:28px;display:flex;flex-direction:column;min-height:285px}.card.wide{grid-column:span 2;min-height:230px}.card .number{color:var(--mint);letter-spacing:.16em;font-size:.8rem;font-weight:750}.card h3{font-size:1.5rem;margin:18px 0 7px}.card p{color:var(--muted);margin:0 0 20px}.card .stack{font-size:.85rem;color:var(--violet);margin-top:auto;padding-top:12px}.card .links{display:flex;gap:20px;flex-wrap:wrap;margin-top:15px}.card a{font-weight:700;color:var(--mint);text-underline-offset:4px}
+    .about{display:grid;grid-template-columns:1.2fr .8fr;gap:42px;align-items:start}.about p{color:#cbd9df}.facts{border-left:2px solid var(--mint);padding-left:24px}.facts p{margin:0 0 20px}.facts strong{display:block;color:var(--text)}.facts span{color:var(--muted)}.chips{display:flex;gap:9px;flex-wrap:wrap;margin-top:25px}.chips span{border:1px solid var(--line);border-radius:999px;padding:5px 12px;color:#d5e4e9;font-size:.87rem}
+    .contact{border-top:1px solid var(--line);padding-bottom:90px}.contact p{color:var(--muted);max-width:650px}footer{border-top:1px solid var(--line);padding:22px 0;color:var(--muted);font-size:.88rem}footer .wrap{display:flex;justify-content:space-between;gap:15px;flex-wrap:wrap}
+    @media(max-width:680px){.wrap{width:min(100% - 32px,1120px)}nav{align-items:flex-start;flex-direction:column;padding:16px 0;gap:8px}.navlinks{gap:16px;font-size:.9rem}.hero{padding:64px 0 42px}.grid,.about{grid-template-columns:1fr}.card.wide{grid-column:auto}.card{min-height:0}section{padding:35px 0 48px}}
+    @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.button:hover{transform:none}}
+  </style>
 </head>
 <body>
-    <header>
-        <nav>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="contato.html">Contato</a></li>
-                <li><a href="projetos.html">Projetos</a></li>
-            </ul>
-        </nav>
-    </header>
-    <main>
-        <section>
-            <h1>Meu Portfólio</h1>
-            <p>Olá, meu nome é <strong>Luís</strong>, sou desenvolvedor mobile e estou em busca de novas oportunidades.</p>
-            <p>Atualmente estou estudando <strong>Android</strong>, <strong>Flutter</strong>, <strong>TypeScript</strong> e <strong>JavaScript</strong>.</p>
-            <p>Meu objetivo é me tornar um desenvolvedor fullstack.</p>
-        </section>
-
-        
-
-        <section>
-            <!-- Div para Mídias Sociais. Deve ficar no final -->
-            <div>
-                <a href="https://github.com/pajeeh" target="blank"><img
-                        src="https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white"></a>
-                <a href="https://instagram.com/_pajeeh" target="blank"><img
-                        src="https://img.shields.io/badge/Instagram-E4405F?style=for-the-badge&logo=instagram&logoColor=white"></a>
-                <a href="https://linkedin.com/in/lagsantos" target="blank"><img
-                        src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white"
-                        alt="lagsantos"></a>
-            </div>
-        </section>
-
-        <section>
-            <h2>Minhas linguagens favoritas</h2>
-            <ul>
-                <li>C</li>
-                <li>Dart</li>
-                <li>C++</li>
-                <li>Python</li>
-                <li>TypeScript</li>
-            </ul>
-        </section>
-
-        <section>
-            <h2 align="left"><strong>My GitHub Statistics:</strong></h2>
-            <br />
-            <div align="center">
-                <div align="center">
-                    <a href="https://github.com/pajeeh">
-                        <img height="180em"
-                            src="https://github-readme-streak-stats.herokuapp.com?user=pajeeh&theme=hacker&date_format=j%20M%5B%20Y%5D&border=00FF00&fire=00FF00&ring=30D711"
-                            alt="pajeeh" />
-                    </a>
-                </div>
-            
-                <a href="https://github.com/pajeeh">
-                    <!--<br/> -->
-                    <img height="200em"
-                        src="https://github-readme-stats.vercel.app/api?username=pajeeh&include_all_commits=true&show_icons=true&theme=merko&hide_border=false&border_color=00FF00&title_color=39FF14&text_color=32CD32&custom_title=Paj%C3%A9%20GitHub%20Stats" />
-            
-                    <img height="200em"
-                        src="https://github-readme-stats.vercel.app/api/top-langs/?username=pajeeh&include_all_commits=true&show_icons=true&layout=compact&langs_count=10&theme=merko&hide_border=false&border_color=00FF00&title_color=39FF14&text_color=32CD32" />
-                </a>
-            </div>
-        </section>
-
-        <!-- Div para Spotify -->
-        <div align="center">
-            <h2 align="center"> <strong>Check out what I'm listening on Spotify🎵</strong></h2>
-        
-            <br />
-        
-            <a href="https://open.spotify.com/user/t7jdtrhmk7joivnm2cdd3c9py">
-                <img align="center" height="75" width="75" src="https://www.svgrepo.com/show/217778/spotify.svg">
-            </a>
-            <br /><br />
-        
-            [![Spotify](https://novatorem-pajeeh.vercel.app/api/spotify?background_color=0d1117&border_color=00FF00&)](https://open.spotify.com/user/t7jdtrhmk7joivnm2cdd3c9py)
-        </div>
-    </main>
-    <footer>
-        <p>Desenvolvido por <a href="https://github.com/pajeeh">Luís</a></p>
-    </footer>
-    
+  <a class="skip" href="#conteudo">Pular para o conteúdo</a>
+  <header><nav class="wrap" aria-label="Navegação principal"><a class="brand" href="#inicio">PAJÉ / DEV</a><div class="navlinks"><a href="#projetos">Projetos</a><a href="#trajetoria">Trajetória</a><a href="#contato">Contato</a></div></nav></header>
+  <main id="conteudo">
+    <div class="wrap" id="inicio"><div class="hero"><p class="eyebrow">Luís A. G. dos Santos · Desenvolvedor de software</p><h1>Código com personalidade.<br><span>Produto com propósito.</span></h1><p class="lede">Pode me chamar de Pajé. Construo aplicações e experiências digitais com Flutter, Dart, React e TypeScript — do problema real à interface que as pessoas querem usar.</p><div class="actions"><a class="button" href="#projetos">Explorar projetos</a><a class="button secondary" href="https://www.linkedin.com/in/lagsantos/" target="_blank" rel="noopener noreferrer">Conversar no LinkedIn ↗</a></div></div></div>
+    <section class="wrap" id="projetos"><p class="eyebrow">Trabalho selecionado</p><h2>Ideias que viraram código</h2><p class="intro">Projetos autorais com problemas, escolhas técnicas e estados diferentes de evolução. Explore a demo ou o repositório para ver o que já existe.</p><div class="grid">
+      <article class="card"><div class="number">01 / MÚSICA & PRODUTO</div><h3>Aurora Music</h3><p>Player musical pessoal com identidade própria, reprodução pelo player oficial do YouTube, biblioteca e sessões compartilhadas. Uma experiência web em evolução contínua.</p><div class="stack">React · TypeScript · PWA · Cloudflare</div><div class="links"><a href="https://pajeeh.github.io/aurora-music/">Abrir demo ↗</a><a href="https://github.com/pajeeh/aurora-music">Ver código ↗</a></div></article>
+      <article class="card"><div class="number">02 / MOBILE & MORADIA</div><h3>App Repúblicas</h3><p>Aplicativo em desenvolvimento para facilitar a busca por moradia universitária. Parte de um problema vivido por estudantes e organiza vagas e perfis em uma experiência mobile.</p><div class="stack">Flutter · Dart · Firebase</div><div class="links"><a href="https://github.com/pajeeh/App-Republicas">Explorar projeto ↗</a></div></article>
+      <article class="card"><div class="number">03 / JOGOS & SISTEMAS</div><h3>FreelaVerse</h3><p>Simulador de mundo cibernético com interface de terminal, economia e exploração de redes. O núcleo do jogo está em desenvolvimento privado; o showcase público apresenta conceito e telas da versão alpha.</p><div class="stack">Flutter · Dart · Game design</div><div class="links"><a href="https://github.com/pajeeh/FreelaVerse-Showcase">Ver showcase ↗</a></div></article>
+      <article class="card"><div class="number">04 / JOGO NO NAVEGADOR</div><h3>Donkey Kong Retro</h3><p>Uma releitura jogável de um clássico. Projeto curto para experimentar lógica de jogo, interação e publicação na web.</p><div class="stack">JavaScript · MakeCode</div><div class="links"><a href="https://pajeeh.github.io/donkey-kong-retro/">Jogar ↗</a><a href="https://github.com/pajeeh/donkey-kong-retro">Ver projeto ↗</a></div></article>
+    </div></section>
+    <section class="wrap about" id="trajetoria"><div><p class="eyebrow">Quem constrói</p><h2>Curiosidade técnica. Atenção às pessoas.</h2><p>Estudo Análise e Desenvolvimento de Sistemas na FT/UNICAMP. Minha trajetória passa pelo ensino de Robótica e Tecnologia, desenvolvimento mobile e evolução de sistemas de negócio. Gosto de entender o usuário, organizar a solução e cuidar dos detalhes da entrega.</p><p>No projeto Kura, atuo na evolução de uma aplicação Angular/TypeScript, com trabalho em fluxos de negócio, formulários e colaboração por branches e merge requests. Como o sistema pertence a um contexto privado, compartilho apenas a natureza do trabalho, sem código ou dados internos.</p><p>Quero crescer em um time que constrói produtos digitais de grande alcance, especialmente em desenvolvimento mobile e software.</p><div class="chips"><span>Flutter</span><span>Dart</span><span>Angular</span><span>React</span><span>TypeScript</span><span>Firebase</span><span>Git</span><span>UI/UX</span></div></div><aside class="facts" aria-label="Resumo da trajetória"><p><strong>FT/UNICAMP</strong><span>Análise e Desenvolvimento de Sistemas</span></p><p><strong>Robótica e Tecnologia</strong><span>Experiência como professor, da lógica ao protótipo</span></p><p><strong>Produto real</strong><span>Aplicações mobile, web e sistemas de negócio</span></p></aside></section>
+    <section class="wrap contact" id="contato"><p class="eyebrow">Próxima conexão</p><h2>Vamos construir algo útil?</h2><p>Procuro oportunidades para contribuir com software, aprender com um time forte e criar produtos que aproximem pessoas de soluções reais.</p><div class="actions"><a class="button" href="https://www.linkedin.com/in/lagsantos/" target="_blank" rel="noopener noreferrer">Falar comigo ↗</a><a class="button secondary" href="https://github.com/pajeeh" target="_blank" rel="noopener noreferrer">GitHub ↗</a><a class="button secondary" href="https://www.instagram.com/_pajeeh/" target="_blank" rel="noopener noreferrer">Instagram ↗</a></div></section>
+  </main>
+  <footer><div class="wrap"><span>© 2026 Luís A. G. dos Santos · Pajé</span><span>Feito com intenção, código e café.</span></div></footer>
 </body>
 </html>
